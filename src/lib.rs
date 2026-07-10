@@ -1,9 +1,11 @@
 //! Throwaway crate for g-swarm end-to-end eval.
-//! The `add` function is intentionally unimplemented so the test suite fails
-//! until a worker implements it.
 
 pub fn add(a: i64, b: i64) -> i64 {
-    unimplemented!("TODO: implement add so the tests pass")
+    a + b
+}
+
+pub fn divide(a: i64, b: i64) -> i64 {
+    a / b
 }
 
 #[cfg(test)]
@@ -18,5 +20,15 @@ mod tests {
     #[test]
     fn adds_signed() {
         assert_eq!(add(-4, 1), -3);
+    }
+
+    #[test]
+    fn divides_positive() {
+        assert_eq!(divide(6, 3), 2);
+    }
+
+    #[test]
+    fn divides_signed() {
+        assert_eq!(divide(-9, 3), -3);
     }
 }
