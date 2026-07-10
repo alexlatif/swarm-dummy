@@ -6,6 +6,10 @@ pub fn add(a: i64, b: i64) -> i64 {
     unimplemented!("TODO: implement add so the tests pass")
 }
 
+pub fn greet() -> &'static str {
+    "hi"
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -18,5 +22,10 @@ mod tests {
     #[test]
     fn adds_signed() {
         assert_eq!(add(-4, 1), -3);
+    }
+
+    #[test]
+    fn greets() {
+        assert_eq!(greet(), "hi");
     }
 }
