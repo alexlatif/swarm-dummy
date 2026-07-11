@@ -21,4 +21,9 @@ mod tests {
     fn adds_signed() {
         assert_eq!(add(-4, 1), -3);
     }
+
+    #[test]
+    fn noop_does_nothing() {
+        noop();
+    }
 }
