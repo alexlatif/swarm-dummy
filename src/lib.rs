@@ -6,6 +6,8 @@ pub fn add(a: i64, b: i64) -> i64 {
     unimplemented!("TODO: implement add so the tests pass")
 }
 
+pub fn noop() {}
+
 #[cfg(test)]
 mod tests {
     use super::*;
